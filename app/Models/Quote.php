@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Quote extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'content', 'source', 'category', 'tags', 'favorited',
+    ];
+
+    protected $casts = [
+        'favorited' => 'boolean',
+    ];
+}
